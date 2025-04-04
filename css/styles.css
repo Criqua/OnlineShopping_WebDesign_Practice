@@ -56,6 +56,10 @@ h1 {
     background-color: rgba(243, 156, 18, 0.1);
 }
 
+#Login__Selection a{
+    font-weight: 800;
+}
+
 .featured-products {
     display: flex;
     justify-content: center;
@@ -99,11 +103,11 @@ h1 {
 .product-card h2 {
     font-size: 1.4em;
     color: #333;
-    white-space: nowrap;  /* Evita que el texto se envuelva en varias líneas */
-    overflow: hidden;     /* Oculta cualquier parte del texto que se desborde */
-    text-overflow: ellipsis; /* Agrega "..." al final del texto si se desborda */
-    width: 100%;          /* Asegura que el texto ocupe todo el ancho disponible */
-    text-align: center;   /* Centra el texto en la tarjeta */
+    white-space: nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    width: 100%;          
+    text-align: center;
 }
 
 
@@ -153,9 +157,13 @@ button span {
     margin-right: 8px;
 }
 
-@media (max-width: 768px) {
-    .featured-products {
+@media (max-width: 650px) { /*Mínimo dimensionado de largo (tomando de referente al iPhone SE)*/
+    .simple_navbar ul {
         flex-direction: column;
-        align-items: center;
+        gap: 10px;
+    }
+
+    .simple_navbar a {
+        display: block;
     }
 }
