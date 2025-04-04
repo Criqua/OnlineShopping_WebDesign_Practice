@@ -8,6 +8,7 @@ body {
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 header {
@@ -58,9 +59,11 @@ h1 {
 .featured-products {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
     margin-top: 20px;
     flex-wrap: wrap;
+    width: 100%;
+    max-width: 960px;
 }
 
 .product-card {
@@ -85,18 +88,24 @@ h1 {
 
 .product-card img {
     width: 100%;
-    height: auto;
+    height: 200px;
+    object-fit: contain;
     border-radius: 12px;
     background-color: white;
     padding: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    object-fit: cover;
 }
 
 .product-card h2 {
     font-size: 1.4em;
     color: #333;
+    white-space: nowrap;  /* Evita que el texto se envuelva en varias líneas */
+    overflow: hidden;     /* Oculta cualquier parte del texto que se desborde */
+    text-overflow: ellipsis; /* Agrega "..." al final del texto si se desborda */
+    width: 100%;          /* Asegura que el texto ocupe todo el ancho disponible */
+    text-align: center;   /* Centra el texto en la tarjeta */
 }
+
 
 .product-card p {
     color: #666;
@@ -107,7 +116,7 @@ footer {
     background-color: #343a40;
     color: white;
     padding: 15px 0;
-    margin-top: auto;
+    margin-top: 25px;
     text-align: center;
     width: 100%;
     font-weight: 500;
